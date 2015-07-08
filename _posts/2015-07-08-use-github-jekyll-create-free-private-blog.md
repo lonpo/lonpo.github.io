@@ -15,28 +15,29 @@ share: true
 # 安装ruby、Bundler、Jekyll
 
 	gem install github-pages
+	
 
 * 安装Jekyll的时候特别注意，因为rubygems.org可能别墙了，所以编写Gemfile文件的时候需要修改数据源：具体Gemfile文件为：
 
 	source 'http://ruby.taobao.org/'
 	gem 'github-pages'
 	
+	
 * 运行Jekyll
 
 	bundle exec jekyll serve
+	
 
 * 看到运行启动之后，就可以访问http://localhost:4000
 # 绑定自己的域名
 访问地址：[setup custom domain with Github pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/)
 
 	vim CNAME
-
+	
 然后再输入
 
 	yourdomain.com
 	
-
-
 * 如果想拥有属于自己的样式，我们可以参考：
 * jekyll网址：[jekyll sites](https://github.com/jekyll/jekyll/wiki/sites)
 * 找到github源代码，拷贝复制所有文件夹，之后修改关键字
