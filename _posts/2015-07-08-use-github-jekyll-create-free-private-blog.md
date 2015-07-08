@@ -14,13 +14,12 @@ share: true
 * 访问jekyll按照页面[Jekyll Install](https://help.github.com/articles/using-jekyll-with-pages/)
 # 安装ruby、Bundler、Jekyll
 
-`gem install github-pages`
+	gem install github-pages
 
 * 安装Jekyll的时候特别注意，因为rubygems.org可能别墙了，所以编写Gemfile文件的时候需要修改数据源：具体Gemfile文件为：
-
+* 
 	source 'http://ruby.taobao.org/'
 	gem 'github-pages'
-				
 * 
 * 运行Jekyll
 
