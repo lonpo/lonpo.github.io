@@ -57,12 +57,12 @@ share: true
 
 ##内容格式
 所有博客文章顶部都必须有一段YAML头信息，并且需要按照 YAML 的格式写在两行三虚线之间。如：
-	---
-	layout: post
-	title: 使用github和jekyll搭建免费博客
-	description: "使用github和jekyll搭建免费博客"
-	category: github
-	tags: [github, jekyll, markdown]
-	comments: true
-	share: true
-	---
+    ---
+    layout: post
+    title: 使用github和jekyll搭建免费博客
+    description: "使用github和jekyll搭建免费博客"
+    category: github
+    tags: [github, jekyll, markdown]
+    comments: true
+    share: true
+    ---
