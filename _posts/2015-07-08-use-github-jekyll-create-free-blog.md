@@ -8,7 +8,6 @@ comments: true
 share: true
 ---
 
-#使用github和jekyll搭建免费博客
 [TOC]
 # 访问github pages
 * 点击进入[Github pages](https://pages.github.com/)
@@ -48,8 +47,8 @@ share: true
 >年-月-日-标题.MARKUP
 
 如下：
->2011-12-31-new-years-eve-is-awesome.md
->2012-09-12-how-to-write-a-blog.textile
+> 2011-12-31-new-years-eve-is-awesome.md
+> 2012-09-12-how-to-write-a-blog.textile
 
 ##内容格式
 所有博客文章顶部都必须有一段YAML头信息，并且需要按照 YAML 的格式写在两行三虚线之间。如：
