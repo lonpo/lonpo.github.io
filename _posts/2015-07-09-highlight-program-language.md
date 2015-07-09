@@ -110,35 +110,6 @@ Allow from All
   }
 ```
 
-##CSS
-```css
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  body:first-of-type pre::after {
-    content: 'highlight: ' attr(class);
-  }
-  body {
-    background: linear-gradient(45deg, blue, red);
-  }
-}
-
-@import url('print.css');
-@page:right {
- margin: 1cm 2cm 1.3cm 4cm;
-}
-
-@font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
-}
-
-div.text,
-#content,
-li[lang=ru] {
-  font: Tahoma, Chunkfive, sans-serif;
-  background: url('hatch.png') /* wtf? */;  color: #F0F0F0 !important;
-  width: 100%;
-}
-```
-
 ##HTTP
 ```http
 POST /task?id=1 HTTP/1.1
@@ -147,47 +118,6 @@ Content-Type: application/json; charset=utf-8
 Content-Length: 19
 
 {"status": "ok", "extended": true}
-```
-
-##Javascript
-```javascript
-import {x, y} as p from 'point';
-const ANSWER = 42;
-
-class Car extends Vehicle {
-  constructor(speed, cost) {
-    super(speed);
-
-    var c = Symbol('cost');
-    this[c] = cost;
-
-    this.intro = `This is a car runs at
-      ${speed}.`;
-  }
-}
-
-for (let num of [1, 2, 3]) {
-  console.log(num + 0b111110111);
-}
-
-function $initHighlight(block, flags) {
-  try {
-    if (block.className.search(/\bno\-highlight\b/) != -1)
-      return processBlock(block.function, true, 0x0F) + ' class=""';
-  } catch (e) {
-    /* handle exception */
-    var e4x =
-        <div>Example
-            <p>1234</p></div>;
-  }
-  for (var i = 0 / 2; i < classes.length; i++) { // "0 / 2" should not be parsed as regexp
-    if (checkCondition(classes[i]) === undefined)
-      return /\d+[\s/]/g;
-  }
-  console.log(Array.every(classes, Boolean));
-}
-
-export  $initHighlight;
 ```
 
 ##JSON
