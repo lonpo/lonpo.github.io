@@ -50,6 +50,8 @@ public abstract class L2Character extends L2Object {
 
 ```
 
+<embed src="http://www.xiami.com/widget/1361772_1770747949/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent"></embed>
+
 <!--more-->
 
 ##apache
