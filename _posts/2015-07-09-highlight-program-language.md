@@ -12,6 +12,7 @@ share: true
 
 # 语言分类
 1. java
+
 ```java
 /**
  * @author John Smith <john.smith@example.com>
@@ -48,5 +49,6 @@ public abstract class L2Character extends L2Object {
     }
   }
 }
+
 ```
 
