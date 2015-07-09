@@ -16,7 +16,7 @@ share: true
 
 	`gem install github-pages`
 	
-<!--more-->
+<!-more->
 * 安装Jekyll的时候特别注意，因为rubygems.org可能别墙了，所以编写Gemfile文件的时候需要修改数据源：具体Gemfile文件为：
 
 	`source 'http://ruby.taobao.org/'`
