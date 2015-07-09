@@ -11,7 +11,7 @@ share: true
 
 
 # 语言分类
-##java
+* java
 
 ```java
 /**
@@ -51,8 +51,8 @@ public abstract class L2Character extends L2Object {
 }
 
 ```
-
-###apache
+***
+* apache
 ```apache
 # rewrite`s rules for wordpress pretty url
 LoadModule rewrite_module  modules/mod_rewrite.so
