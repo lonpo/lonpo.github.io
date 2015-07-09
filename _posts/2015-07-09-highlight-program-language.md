@@ -391,3 +391,4 @@ class SomeClass:
 >>> message = '''interpreter
 ... prompt'''
 ```
+难道后面的都无法显示了吗？
