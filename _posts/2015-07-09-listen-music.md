@@ -13,6 +13,8 @@ share: true
 
 > **梦想还是要有的，万一实现了呢？**
 
+<!--more-->
+
 ##放松自己的心情，聆听音乐！
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="http://music.163.com/outchain/player?type=0&id=87257665&auto=1&height=430"></iframe>
