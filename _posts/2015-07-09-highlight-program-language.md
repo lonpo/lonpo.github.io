@@ -7,8 +7,6 @@ tags: [markdown, Redcarpet, Highlight]
 comments: true
 share: true
 ---
-[toc]
-
 
 # 语言分类
 - java
