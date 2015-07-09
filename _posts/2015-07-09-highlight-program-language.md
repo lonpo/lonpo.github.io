@@ -128,48 +128,6 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-##C#
-```c#
-using System;
-
-#pragma warning disable 414, 3021
-
-public class Program
-{
-    /// <summary>The entry point to the program.</summary>
-    public static int Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
-        string s = @"This
-""string""
-spans
-multiple
-lines!";
-
-        dynamic x = new ExpandoObject();
-        x.MyProperty = 2;
-
-        return 0;
-    }
-}
-
-async Task<int> AccessTheWebAsync()
-{
-    // ...
-    string urlContents = await getStringTask;
-    return urlContents.Length;
-}
-
-internal static void ExceptionFilters()
-{
-  try 
-  {
-      throw new Exception();
-  }
-  catch (Exception e) when (e.Message == "My error") { }
-}
-```
-
 ##CSS
 ```css
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -361,55 +319,9 @@ http {
 }
 ```
 
-##Object C
-```object
-#import <UIKit/UIKit.h>
-#import "Dependency.h"
 
-@protocol WorldDataSource
-@optional
-- (NSString*)worldName;
-@required
-- (BOOL)allowsToLive;
-@end
-
-@interface Test : NSObject <HelloDelegate, WorldDataSource> {
-  NSString *_greeting;
-}
-
-@property (nonatomic, readonly) NSString *greeting;
-- (IBAction) show;
-@end
-
-@implementation Test
-
-@synthesize test=_test;
-
-+ (id) test {
-  return [self testWithGreeting:@"Hello, world!\nFoo bar!"];
-}
-
-+ (id) testWithGreeting:(NSString*)greeting {
-  return [[[self alloc] initWithGreeting:greeting] autorelease];
-}
-
-- (id) initWithGreeting:(NSString*)greeting {
-  if ( (self = [super init]) ) {
-    _greeting = [greeting retain];
-  }
-  return self;
-}
-
-- (void) dealloc {
-  [_greeting release];
-  [super dealloc];
-}
-
-@end
-```
-
-##Java-PHP
-```java
+##PHP
+```php
 require_once 'Zend/Uri/Http.php';
 
 namespace Location\Web;
