@@ -50,7 +50,7 @@ public abstract class L2Character extends L2Object {
 
 ```
 
-<!-more->
+<!--more-->
 
 ##apache
 
