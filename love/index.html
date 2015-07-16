@@ -2,12 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="title" content="Bootstrap可视化布局系统">
-<meta name="description" content="xxxxxxxxxxxxxxxxxxxxxxxxxxx">
-<meta name="keywords" content="xxxxxxxxxxx,xxxxxxxxxx,xxxxxxxx">
-<title>fullpage</title>
+<meta name="title" content="宝宝,我们结婚吧!">
+<meta name="description" content="宝宝，我们结婚吧！我愿意付出我的一切,爱护你,保护你,一直幸福到老！">
+<meta name="keywords" content="我们结婚吧,POPO,宝宝,jinking">
+<title>宝宝,我们结婚吧!</title>
 <link rel="stylesheet" href="./css/jquery.fullPage.css">
 <link rel="stylesheet" href="./css/animate.min.css">
 <link rel="stylesheet" href="./css/style.css">
@@ -190,116 +189,20 @@ body {
 	animation-name: bounceInLeft;
 }
 
-
-
-
-
-
-
-
-
-
 </style>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/jquery-ui.min.js"></script>
 <script src="./js/jquery.fullPage.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(
-			function() {
-				$('#fullpage')
-						.fullpage(
-								{
-									'css3' : true,
-									'sectionsColor' : [ '#999', '#4BBFC3',
-											'#7BAABE', '#f90', '#fc9',
-											'#5CDFC3', '#ACAABE', '#f88',
-											'#C91' ],
-									'verticalCentered' : false,
-									'navigation' : true,
-									'navigationTooltips' : [ '我们', '情人节', '生活',
-											'POPO', 'Jiking', '爱情时钟', '一生相伴',
-											'我们结婚吧', '写下祝福' ],
-									'menu' : '#menu',
-									'afterLoad' : function(anchorLink, index){
-										if(index == 9){
-											$(".page1_yun1").hide();
-											$(".page1_yun2").hide();
-											$(".page1_yun3").hide();
-										}else{
-											$(".page1_yun1").show();
-											$(".page1_yun2").show();
-											$(".page1_yun3").show();
-										}
-										
-										if(index != 1){
-											$("#back").show().mouseover(function(){
-												$(this).animate({
-													bottom : "30"
-												}, 200)
-											}).mouseout(function() {
-												$(this).animate({
-													bottom : "20"
-												}, 200)
-											}).stop().animate({
-												borderRadius : "50%",
-												opacity : 1
-											}, 1000).click(function() {
-												$('#fullpage').fullpage.moveTo(1);
-											});	
-																					
-										}else{
-											$("#back").stop().animate({
-												opacity : 0
-											}, 500, function() {
-												$("#back").css({
-													borderRadius : 0
-												}).hide();
-											});										
-										}					
-									}
-								});
-			});
-			
-		setInterval(function() {
-			$(function() {
-				$(".page1_yun1").fadeIn('1000').animate({
-					left : '860'
-				}, 20000, 'linear').animate({
-					left : '0'
-				}, 20000, 'linear')
-		
-			})
-		}, 0);
-		setInterval(function() {
-			$(function() {
-				$(".page1_yun2").fadeIn('1000').animate({
-					right : '750'
-				}, 20000, 'linear').animate({
-					right : '0'
-				}, 20000, 'linear')
-			})
-		}, 0);
-		setInterval(function() {
-			$(function() {
-				$(".page1_yun3").fadeIn('1000').animate({
-					left : '660'
-				}, 15000, 'linear').animate({
-					left : '0'
-				}, 15000, 'linear')
-			})
-		}, 0);	
-			
-</script>
-
+<script src="./js/mylove.js"></script>
 </head>
 <body>
 	<div id="menu">
 		<div class="bg_music">
 			<object type="application/x-shockwave-flash"
-				data="dewplayer.swf?mp3=ayd.mp3&autostart=1" width="200" height="20"
+				data="dewplayer.swf?mp3=marryme.mp3&autostart=1&autoreplay=1" width="200" height="20"
 				id="dewplayer">
 				<param name="wmode" value="transparent" />
-				<param name="movie" value="dewplayer.swf?mp3=ayd.mp3&autostart=1" />
+				<param name="movie" value="dewplayer.swf?mp3=marryme.mp3&autostart=1&autoreplay=1" />
 			</object>
 		</div>
 		<div class="page1_yun1"></div>
