@@ -16,13 +16,14 @@
 									'menu' : '#menu',
 									'afterLoad' : function(anchorLink, index){
 										if(index == 9){
-											$(".page1_yun1").hide();
-											$(".page1_yun2").hide();
-											$(".page1_yun3").hide();
+
+											$(".page1_yun1").css("opacity","0");
+											$(".page1_yun2").css("opacity","0");
+											$(".page1_yun3").css("opacity","0");
 										}else{
-											$(".page1_yun1").show();
-											$(".page1_yun2").show();
-											$(".page1_yun3").show();
+											$(".page1_yun1").css("opacity","1");
+											$(".page1_yun2").css("opacity","1");
+											$(".page1_yun3").css("opacity","1");
 										}
 										
 										if(index != 1){
@@ -54,7 +55,9 @@
 								});
 			});
 			
-		setInterval(function() {
+	
+	
+		var yun1 = setInterval(function() {
 			$(function() {
 				$(".page1_yun1").fadeIn('1000').animate({
 					left : '860'
@@ -64,7 +67,7 @@
 		
 			})
 		}, 0);
-		setInterval(function() {
+		var yun2 = setInterval(function() {
 			$(function() {
 				$(".page1_yun2").fadeIn('1000').animate({
 					right : '750'
@@ -73,7 +76,7 @@
 				}, 20000, 'linear')
 			})
 		}, 0);
-		setInterval(function() {
+		var yun3 = setInterval(function() {
 			$(function() {
 				$(".page1_yun3").fadeIn('1000').animate({
 					left : '660'
@@ -82,3 +85,6 @@
 				}, 15000, 'linear')
 			})
 		}, 0);	
+		
+		
+		
