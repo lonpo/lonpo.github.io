@@ -14,9 +14,12 @@
 
 .page1_bg {
 	background: url("../images/page1_bg.png") 50% 0 no-repeat;
-	width: 100%;
+	left: 50%;
+	width: 650px;
 	height: 500px;
-	margin:80px auto;
+	margin-left: -325px;
+	margin-top: 80px;
+	position: absolute;
 }
 
 
