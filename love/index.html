@@ -2,140 +2,399 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="title" content="宝宝,我们结婚吧!">
-<meta name="description" content="宝宝，我们结婚吧！我愿意付出我的一切,爱护你,保护你,一直幸福到老！">
-<meta name="keywords" content="我们结婚吧,POPO,宝宝,jinking">
-<title>宝宝,我们结婚吧!</title>
-<link rel="stylesheet" href="./css/style.css">
+<meta name="title" content="Bootstrap可视化布局系统">
+<meta name="description" content="xxxxxxxxxxxxxxxxxxxxxxxxxxx">
+<meta name="keywords" content="xxxxxxxxxxx,xxxxxxxxxx,xxxxxxxx">
+<title>fullpage</title>
+<link rel="stylesheet" href="./css/jquery.fullPage.css">
 <link rel="stylesheet" href="./css/animate.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 16px/1.8 "Microsoft Yahei", verdana;
+}
+/* 右侧导航 */
+#fullPage-nav {
+	_display: none;
+	font-size: 12px;
+}
+
+#fullPage-nav li {
+	width: 90px;
+	height: 21px;
+	margin: 10px 0 0;
+	vertical-align: middle;
+}
+
+#fullPage-nav li a {
+	float: right;
+	width: 21px;
+	height: 21px;
+	color: #8F9DA4;
+	text-decoration: none;
+	text-align: right;
+	background: url(images/dot.png) 5px 5px no-repeat;
+}
+
+#fullPage-nav li .active {
+	background-position: 0 bottom;
+}
+
+#fullPage-nav span {
+	display: none;
+}
+
+.fullPage-tooltip {
+	float: left;
+	top: 0;
+	margin-right: 5px;
+	font: 12px "Microsoft Yahei";
+	color: #8F9DA4;
+	line-height: 21px;
+}
+
+.section {
+	position: relative;
+	overflow: hidden;
+}
+
+.section .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.section .bg img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* CSS3过度及动画 */
+.active *{
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.active .page1_bg {
+	-webkit-animation-name: rollIn;
+	animation-name: rollIn;
+}
+
+.active .page1_cxx {
+	animation-delay: 0.5s; /* W3C 和 Opera */
+	-webkit-animation-delay: 0.5s; /* Safari 和 Chrome */
+	-webkit-animation-name: bounceInLeft;
+	animation-name: bounceInLeft;
+}
+
+.active .page1_cc {
+	animation-delay: 0.5s; /* W3C 和 Opera */
+	-webkit-animation-delay: 0.5s; /* Safari 和 Chrome */
+	-webkit-animation-name: bounceInRight;
+	animation-name: bounceInRight;
+}
+
+.active .page1_heart {
+	animation-delay: 0.3s; /* W3C 和 Opera */
+	-webkit-animation-delay: 0.3s; /* Safari 和 Chrome */
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+}
+
+.active .page1_t1 {
+	animation-delay: 0.8s; /* W3C 和 Opera */
+	-webkit-animation-delay: 0.8s; /* Safari 和 Chrome */
+	-webkit-animation-name: zoomInDown;
+	animation-name: zoomInDown;
+}
+
+.active .page1_t2 {
+	animation-delay: 1s; /* W3C 和 Opera */
+	-webkit-animation-delay: 1s; /* Safari 和 Chrome */
+	-webkit-animation-name: zoomInDown;
+	animation-name: zoomInDown;
+}
+
+.active .page1_t3 {
+	animation-delay: 1.4s; /* W3C 和 Opera */
+	-webkit-animation-delay: 1.4s; /* Safari 和 Chrome */
+	-webkit-animation-name: zoomInDown;
+	animation-name: zoomInDown;
+}
+
+.active .page1_right {
+	animation-delay: 1.8s; /* W3C 和 Opera */
+	-webkit-animation-delay: 1.8s; /* Safari 和 Chrome */
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+.active .page1_left {
+	animation-delay: 1.8s; /* W3C 和 Opera */
+	-webkit-animation-delay: 1.8s; /* Safari 和 Chrome */
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+.active .page2_bg {
+	-webkit-animation-name: rotateIn;
+	animation-name: rotateIn;
+}
+
+.active .page3_bg {
+	-webkit-animation-name: lightSpeedIn;
+	animation-name: lightSpeedIn;
+}
+
+.active .page4_bg {
+	-webkit-animation-name: bounceInUp;
+	animation-name: bounceInUp;
+}
+
+.active .page5_bg {
+	-webkit-animation-name: bounceInLeft;
+	animation-name: bounceInLeft;
+}
+
+.active .page6_bg {
+	-webkit-animation-name: bounceInUp;
+	animation-name: bounceInUp;
+}
+
+.active .page7_bg {
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+	-webkit-animation-name: flip;
+	animation-name: flip;
+}
+
+.active .page8_bg {
+	-webkit-animation-name: bounceInRight;
+	animation-name: bounceInRight;
+}
+
+.active .page9_bg {
+	-webkit-animation-name: bounceInLeft;
+	animation-name: bounceInLeft;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
 <script src="./js/jquery.min.js"></script>
-<script src="./js/jquery.mousewheel.min.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/animate.js"></script>
-<script>
-	//参数设定
-	var time = 500;//切换时间
-	ntime = 500//nav变换时间；
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				$('#fullpage')
+						.fullpage(
+								{
+									'css3' : true,
+									'sectionsColor' : [ '#999', '#4BBFC3',
+											'#7BAABE', '#f90', '#fc9',
+											'#5CDFC3', '#ACAABE', '#f88',
+											'#C91' ],
+									'verticalCentered' : false,
+									'navigation' : true,
+									'navigationTooltips' : [ '我们', '情人节', '生活',
+											'POPO', 'Jiking', '爱情时钟', '一生相伴',
+											'我们结婚吧', '写下祝福' ],
+									'menu' : '#menu',
+									'afterLoad' : function(anchorLink, index){
+										if(index == 9){
+											$(".page1_yun1").hide();
+											$(".page1_yun2").hide();
+											$(".page1_yun3").hide();
+										}else{
+											$(".page1_yun1").show();
+											$(".page1_yun2").show();
+											$(".page1_yun3").show();
+										}
+										
+										if(index != 1){
+											$("#back").show().mouseover(function(){
+												$(this).animate({
+													bottom : "30"
+												}, 200)
+											}).mouseout(function() {
+												$(this).animate({
+													bottom : "20"
+												}, 200)
+											}).stop().animate({
+												borderRadius : "50%",
+												opacity : 1
+											}, 1000).click(function() {
+												$('#fullpage').fullpage.moveTo(1);
+											});	
+																					
+										}else{
+											$("#back").stop().animate({
+												opacity : 0
+											}, 500, function() {
+												$("#back").css({
+													borderRadius : 0
+												}).hide();
+											});										
+										}					
+									}
+								});
+			});
+			
+		setInterval(function() {
+			$(function() {
+				$(".page1_yun1").fadeIn('1000').animate({
+					left : '860'
+				}, 20000, 'linear').animate({
+					left : '0'
+				}, 20000, 'linear')
+		
+			})
+		}, 0);
+		setInterval(function() {
+			$(function() {
+				$(".page1_yun2").fadeIn('1000').animate({
+					right : '750'
+				}, 20000, 'linear').animate({
+					right : '0'
+				}, 20000, 'linear')
+			})
+		}, 0);
+		setInterval(function() {
+			$(function() {
+				$(".page1_yun3").fadeIn('1000').animate({
+					left : '660'
+				}, 15000, 'linear').animate({
+					left : '0'
+				}, 15000, 'linear')
+			})
+		}, 0);	
+			
 </script>
-<script language="javascript">
-		var ss;
-		window.onload = function() {
-			var h = document.documentElement.clientHeight;//适应所有尺寸浏览器
-			document.getElementById('page1').style.height = h + "px";
-			document.getElementById('page2').style.height = h + "px";
-			document.getElementById('page3').style.height = h + "px";
-			document.getElementById('page4').style.height = h + "px";
-			document.getElementById('page5').style.height = h + "px";
-			document.getElementById('page6').style.height = h + "px";
-			document.getElementById('page7').style.height = h + "px";
-			document.getElementById('page8').style.height = h + "px";
-			document.getElementById('page9').style.height = h + "px";
-		}
-</script>
+
 </head>
 <body>
-	<div class="bg_music">
-		<object type="application/x-shockwave-flash"
-			data="dewplayer.swf?mp3=marryme.mp3&autostart=1" width="200" height="20"
-			id="dewplayer">
-			<param name="wmode" value="transparent" />
-			<param name="movie" value="dewplayer.swf?mp3=marryme.mp3&autostart=1" />
-		</object>
+	<div id="menu">
+		<div class="bg_music">
+			<object type="application/x-shockwave-flash"
+				data="dewplayer.swf?mp3=ayd.mp3&autostart=1" width="200" height="20"
+				id="dewplayer">
+				<param name="wmode" value="transparent" />
+				<param name="movie" value="dewplayer.swf?mp3=ayd.mp3&autostart=1" />
+			</object>
+		</div>
+		<div class="page1_yun1"></div>
+		<div class="page1_yun2"></div>
+		<div class="page1_yun3"></div>
+		<div id='back'>返回顶部</div>
+		<div>
+			<a href="/love/"><div id="to_index"></div></a>
+		</div>
+			
 	</div>
 
-	<div id='back'>返回顶部</div>
-	<div>
-		<a href="/love/"><div id="to_index"></div></a>
+	<div id="fullpage">
+		<div class="section" id="page1">
+			<div class="bg">
+				<img src="images/section1.jpg" alt="">
+			</div>
+			<div class="page1_bg"></div>
+			<div class="nameDiv">
+				<div class="page1_cxx"></div>
+				<div class="page1_heart"></div>
+				<div class="page1_cc"></div>
+			</div>
+			<div class="calDiv">
+				<div class="page1_t1"></div>
+				<div class="page1_t2"></div>
+				<div class="page1_t3"></div>
+			</div>
+			<div class="page1_left"></div>
+			<div class="page1_right"></div>
+		</div>
+
+		<div class="section" id="page2">
+			<div class="bg">
+				<img src="images/section2.jpg" alt="">
+			</div>
+			<h3>第二屏</h3>
+			<div class="page2_bg"></div>
+		</div>
+		<div class="section" id="page3">
+			<div class="bg">
+				<img src="images/section3.jpg" alt="">
+			</div>
+			<div class="page3_bg"></div>
+		</div>
+		<div class="section" id="page4">
+			<div class="bg">
+				<img src="images/section4.jpg" alt="">
+			</div>
+			<div class="page4_bg"></div>
+		</div>
+		<div class="section" id="page5">
+			<div class="bg">
+				<img src="images/section5.jpg" alt="">
+			</div>
+			<div class="page5_bg"></div>
+		</div>
+		<div class="section" id="page6">
+			<div class="bg">
+				<img src="images/section6.jpg" alt="">
+			</div>
+			<div class="page6_bg">
+				<div id="elapseClock">
+					<iframe src="love.html" width="600px" height="50" frameborder="0"></iframe>
+				</div>
+				<div class="line"></div>
+			</div>
+		</div>
+		<div class="section" id="page7">
+			<div class="bg">
+				<img src="images/section7.jpg" alt="">
+			</div>
+			<div class="page7_bg"></div>
+		</div>
+		<div class="section" id="page8">
+			<div class="bg">
+				<img src="images/section8.jpg" alt="">
+			</div>
+			<div class="page8_bg">
+				<div id="gaobai">
+						<iframe src="gaobai.html" width="1024px" height="650px" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="section" id="page9">
+			<div class="bg">
+				<img src="images/section9.jpg" alt="">
+			</div>
+			<div class="page9_bg">
+				<div id="comment">
+						<iframe src="comment.html" width="800px" height="500px" frameborder="0"></iframe>
+				</div>
+			</div>	
+		</div>
 	</div>
-	<div>
-		<ul id="content">
-			<li class="main1">
-				<!--第一页-->
-				<div class="page1" id="page1">				
-					<div class="page1_bg"></div>
-					<div class="nameDiv">
-						<div class="page1_cxx"></div>
-						<div class="page1_heart"></div>
-						<div class="page1_cc"></div>
-					</div>
-					<div class="calDiv">
-						<div class="page1_t1"></div>
-						<div class="page1_t2"></div>
-						<div class="page1_t3"></div>
-					</div>
-					<div class="page1_left"></div>
-					<div class="page1_right"></div>
-					<div class="page1_yun1"></div>
-					<div class="page1_yun2"></div>
-					<div class="page1_yun3"></div>
-				</div>
-			</li>
-
-			<li class="main2">
-				<div class="page2" id="page2">
-					<div class="page2_bg"></div>
-				</div>
-			</li>
-			<li class="main3">
-				<div class="page3" id="page3">
-					<div class="page3_bg"></div>
-				</div>
-
-			</li>
-	
-			<li class="main4">
-				<div class="page4" id="page4">
-					<div class="page4_bg"></div>
-				</div>
-			</li>
-			
-			<li class="main5">
-				<div class="page5" id="page5">
-					<div class="page5_bg"></div>
-				</div>
-			</li>
-			
-			<li class="main6">
-				<div class="page6" id="page6">
-
-					<div class="page6_bg">
-						<div id="elapseClock">
-							<iframe src="love.html" width="600px" height="50" frameborder="0"></iframe>
-						</div>
-						<div class="line"></div>
-					</div>
-				</div>
-			</li>
-			
-			<li class="main7">
-				<div class="page7" id="page7">
-					<div class="page7_bg"></div>
-				</div>
-			</li>
-			
-			<li class="main8">
-				<div class="page8" id="page8">
-					<div class="page8_bg">
-						<div id="gaobai">
-								<iframe src="gaobai.html" width="1024px" height="650px" frameborder="0"></iframe>
-						</div>
-					</div>
-				</div>
-			</li>
-			
-			<li class="main9">
-				<div class="page9" id="page9">
-					<div class="page9_bg">
-						<div id="comment">
-								<iframe src="comment.html" width="800px" height="500px" frameborder="0"></iframe>
-						</div>
-					</div>	
-				</div>
-			</li>
-
-		</ul>
-	</div>	
 </body>
 </html>
