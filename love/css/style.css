@@ -141,7 +141,7 @@
 	height: 600px;
 	margin-left: -500px;
 	margin-top: -300px;
-	position: relative;
+	position: absolute;
 }
 
 .page3_bg {
