@@ -14,11 +14,11 @@
 
 .page1_bg {
 	background: url("../images/page1_bg.png") 50% 0 no-repeat;
+	top: 80px;
 	left: 50%;
 	width: 650px;
 	height: 500px;
 	margin-left: -325px;
-	margin-top: 80px;
 	position: absolute;
 }
 
@@ -51,6 +51,7 @@
 	width: 190px;
 	height: 140px;
 	margin-left: -95px;
+	z-index: 100;
 }
 
 .page1_t1 {
