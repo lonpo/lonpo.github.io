@@ -50,7 +50,28 @@
 													borderRadius : 0
 												}).hide();
 											});										
-										}					
+										}	
+										
+										if(index == 6){
+											if(!$("#elapseClock").has("iframe").length){
+												$("#elapseClock").append("<iframe src='love.html' width='600px' height='50' frameborder='0'></iframe>");													
+											}
+										}
+										
+										if(index == 8){
+											if(!$("#gaobai").has("iframe").length){
+												$("#gaobai").append("<iframe src='gaobai.html' width='1024px' height='650px' frameborder='0'></iframe>");													
+											}
+										}
+										
+										if(index == 9){
+											if(!$("#comment").has("iframe").length){
+												$("#comment").append("<iframe src='comment.html' width='800px' height='500px' frameborder='0'></iframe>");													
+											}
+										}	
+										
+										
+										
 									}
 								});
 			});
