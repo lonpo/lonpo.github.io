@@ -1,5 +1,5 @@
 body {
-	background: none; margin: 0px; padding: 0px; color: rgb(255, 255, 255); overflow: auto; font-family: "Î¢ÈíÑÅºÚ"; font-size: 12px;
+	background: none; margin: 0px; padding: 0px; color: rgb(255, 255, 255); overflow: auto; font-family: "Î¢ÈíÑÅºÚ", "sans-serif"; font-size: 12px;
 }
 
 #elapseClock{
@@ -7,5 +7,5 @@ body {
 }
 
 #elapseClock .digit {
-	background: none; color: rgb(255, 255, 255); font-family: "Î¢ÈíÑÅºÚ"; font-size: 36px; font-weight: bold;
+	background: none; color: rgb(255, 255, 255); font-family: "digit"; font-size: 36px; font-weight: bold;
 }

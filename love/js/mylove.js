@@ -16,14 +16,13 @@
 									'menu' : '#menu',
 									'afterLoad' : function(anchorLink, index){
 										if(index == 9){
-
-											$(".page1_yun1").css("opacity","0");
-											$(".page1_yun2").css("opacity","0");
-											$(".page1_yun3").css("opacity","0");
+											$(".page1_yun1").css("opacity","0").css("visibility:","hidden").css("z-index","0");
+											$(".page1_yun2").css("opacity","0").css("visibility:","hidden").css("z-index","0");
+											$(".page1_yun3").css("opacity","0").css("visibility:","hidden").css("z-index","0");
 										}else{
-											$(".page1_yun1").css("opacity","1");
-											$(".page1_yun2").css("opacity","1");
-											$(".page1_yun3").css("opacity","1");
+											$(".page1_yun1").css("opacity","1").css("visibility:","visible").css("z-index","1");
+											$(".page1_yun2").css("opacity","1").css("visibility:","visible").css("z-index","1");
+											$(".page1_yun3").css("opacity","1").css("visibility:","visible").css("z-index","1");
 										}
 										
 										if(index != 1){

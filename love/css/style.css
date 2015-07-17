@@ -212,13 +212,15 @@
 	margin-left: -512px;
 	margin-top: -325px;
 	position: absolute;
+	z-index: 2000;
 }
 
 #gaobai {
 	margin:0 auto;
 	width: 1024px;
 	height: 650px;
-	margin-left: 20px;	
+	margin-left: 20px;
+	z-index: 2222;
 }
 
 .page9_bg {
@@ -230,12 +232,14 @@
 	margin-top: -300px;
 	margin-left: -500px;
 	position: absolute;
+	z-index: 2000;
 }
 
 #comment {
 	margin:100px auto;
 	width: 800px;
 	height: 500px;
+	z-index: 2222;
 }
 
 .digit {

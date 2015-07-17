@@ -157,21 +157,25 @@ body {
 .active .page3_bg {
 	-webkit-animation-name: lightSpeedIn;
 	animation-name: lightSpeedIn;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
 }
 
 .active .page4_bg {
-	-webkit-animation-name: bounceInUp;
-	animation-name: bounceInUp;
+	-webkit-animation-name: fadeInUpBig;
+	animation-name: fadeInUpBig;
 }
 
 .active .page5_bg {
-	-webkit-animation-name: bounceInLeft;
-	animation-name: bounceInLeft;
+	-webkit-animation-name: fadeInDownBig;
+	animation-name: fadeInDownBig;
 }
 
 .active .page6_bg {
-	-webkit-animation-name: bounceInUp;
-	animation-name: bounceInUp;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	animation-name: flipInX
 }
 
 .active .page7_bg {
@@ -198,7 +202,7 @@ body {
 <script src="./js/mylove.js"></script>
 </head>
 <body>
-<audio id="bgmMusic" src="http://qzone.haoduoge.com/music3/2015-02-05/1423149292.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
+<audio id="bgmMusic" src="marryme.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
 	<div id="menu">
 		<!-- <div class="bg_music">						
 			<object type="application/x-shockwave-flash"
