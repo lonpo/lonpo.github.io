@@ -52,8 +52,7 @@ fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的
 
 * 自动生成浪漫网址（请替换year、month、day、hour、boy、girl参数即可）
 
-
-		http://blog.leweg.com/love/lovestory.html?year=2011&month=11&day=11&hour=23&boy=我&girl=女神
+【http://blog.leweg.com/love/lovestory.html?year=2011&month=11&day=11&hour=23&boy=我&girl=女神】
 
 效果演示：[http://blog.leweg.com/love/lovestory.html?year=2014&month=6&day=8&hour=20&boy=jinking&girl=popo](http://blog.leweg.com/love/lovestory.html?year=2014&month=6&day=8&hour=20&boy=jinking&girl=popo)
 
