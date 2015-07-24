@@ -186,10 +186,11 @@ configure: error:
   !!! Can not include OpenSSL headers files. 
 ```
 
-* 解决办法：
-``` bash
+* 解决办法
+
+·
 [root@node1 keepalived-1.2.14]# yum install -y openssl openssl-devel
-```
+·
 
 或者
 
@@ -200,17 +201,17 @@ configure: error:
 !!! Can not include OpenSSL headers files. !!!
 ```
 * 解决办法
-``` bash
-[root@node1 keepalived-1.2.14]# yum install openssl*
-```
+
+
+				[root@node1 keepalived-1.2.14]# yum install openssl*
+
 
 2. configure: error: No SO_MARK declaration in headers
 * 报错：
-``` bash
-checking for kernel macvlan support... no
-checking whether SO_MARK is declared... no
-configure: error: No SO_MARK declaration in headers
-```
+
+				checking for kernel macvlan support... no
+				checking whether SO_MARK is declared... no
+				configure: error: No SO_MARK declaration in headers
 
 * 解决办法
 
