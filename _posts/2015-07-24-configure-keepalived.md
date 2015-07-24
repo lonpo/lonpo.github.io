@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: keepalived安装和配置
@@ -10,6 +9,7 @@ share: true
 ---
 #keepalived安装和配置
 ## 安装
+``` bash
 [root@node1 ~]# wget http://www.keepalived.org/software/keepalived-1.2.13.tar.gz
 [root@node1 ~]# tar zxvf keepalived-1.2.13.tar.gz
 [root@node1 keepalived-1.2.13]# cd keepalived-1.2.13
@@ -23,11 +23,9 @@ share: true
 [root@node1 init.d]# chkconfig --add keepalived
 [root@node1 init.d]# chkconfig keepalived on
 [root@node1 init.d]# mkdir -p /etc/keepalived
-
-#vim /etc/keepalived/keepalived.conf
-
-
-! Configuration File for keepalived 
+[root@node1 init.d]# vim /etc/keepalived/keepalived.conf
+```
+#Configuration File for keepalived 
 
 global_defs { 
 notification_email { 
@@ -53,6 +51,7 @@ virtual_ipaddress {
 192.168.2.165/24 dev eth1 scope global 
 } 
 } 
+
 [root@node1 haproxy]# service keepalived start
 Starting keepalived: [ OK ]
 [root@node1 sbin]# ip add
@@ -159,13 +158,15 @@ vrrp_instance VI_1 {
 
 
 
+* 网络拓扑图
 
 主机名  网络IP                     VIP
-node1 192.168.2.161     192.168.2.165
-node2 192.168.2.162
+node1 192.168.1.179(MASTER)         192.168.1.248
+node2 192.168.1.180(BACKUP)
+node2 192.168.1.181(BACKUP)
 
 ## 问题总结
-报错总结：
+* 报错
 1. ./configure时老是报！
 checking openssl/ssl.h usability... no
 checking openssl/ssl.h presence... no
@@ -174,20 +175,23 @@ configure: error:
   !!! OpenSSL is not properly installed on your system. !!!
   !!! Can not include OpenSSL headers files. 
 
-解决：
+解决办法：
 yum install -y openssl openssl-devel
-版权声明：本文为博主原创文章，未经博主允许不得转载。```
 
-2. configure: error: No SO_MARK declaration in headers
+or
 
-报错：
 checking for openssl/ssl.h... no
 configure: error: 
 !!! OpenSSL is not properly installed on your system. !!!
 !!! Can not include OpenSSL headers files. !!!
+* 解决办法
 [root@node1 keepalived-1.2.14]# yum install openssl*
 
+2. configure: error: No SO_MARK declaration in headers
+* 报错：
 checking for kernel macvlan support... no
 checking whether SO_MARK is declared... no
 configure: error: No SO_MARK declaration in headers
+* 解决办法
 [root@node1 keepalived-1.2.14]# ./configure --prefix=/usr/local/keepalived --disable-fwmark
+
