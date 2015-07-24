@@ -25,6 +25,9 @@ share: true
 [root@node1 init.d]# mkdir -p /etc/keepalived
 [root@node1 init.d]# vim /etc/keepalived/keepalived.conf
 ```
+<!--more-->
+
+``` bash
 #Configuration File for keepalived 
 
 global_defs { 
@@ -51,7 +54,9 @@ virtual_ipaddress {
 192.168.2.165/24 dev eth1 scope global 
 } 
 } 
+```
 
+``` bash
 [root@node1 haproxy]# service keepalived start
 Starting keepalived: [ OK ]
 [root@node1 sbin]# ip add
@@ -73,9 +78,11 @@ inet6 fe80::20c:29ff:fec5:665c/64 scope link
 valid_lft forever preferred_lft forever
 4: sit0: <NOARP> mtu 1480 qdisc noop 
 link/sit 0.0.0.0 brd 0.0.0.0
+```
 
 ## 配置
 
+``` bash
 ##########主服务器（192.168.1.179）
 global_defs { 
 	notification_email {
@@ -101,9 +108,9 @@ vrrp_instance VI_1 {
 		192.168.1.248/24 dev eth1 scope global 
 	} 
 } 
+```
 
-
-
+``` bash
 #############备用服务器1（192.168.1.180 ）
 global_defs { 
 	notification_email {
@@ -128,8 +135,9 @@ vrrp_instance VI_1 {
 	virtual_ipaddress { 
 		192.168.1.248/24 dev eth1 scope global 
 	} 
+```
 
-	
+``` bash	
 #############备用服务器2（192.168.1.181）
 global_defs { 
 	notification_email {
@@ -155,12 +163,12 @@ vrrp_instance VI_1 {
 		192.168.1.248/24 dev eth0 scope global 
 	} 
 } 
-
+```
 
 
 * 网络拓扑图
 
-主机名  网络IP                     VIP
+主机名     网络IP                        VIP
 node1 192.168.1.179(MASTER)         192.168.1.248
 node2 192.168.1.180(BACKUP)
 node2 192.168.1.181(BACKUP)
