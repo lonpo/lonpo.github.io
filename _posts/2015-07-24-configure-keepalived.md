@@ -165,41 +165,55 @@ vrrp_instance VI_1 {
 } 
 ```
 
-
+``` bash
 * 网络拓扑图
 
 主机名     网络IP                        VIP
 node1 192.168.1.179(MASTER)         192.168.1.248
 node2 192.168.1.180(BACKUP)
 node2 192.168.1.181(BACKUP)
+```
 
 ## 问题总结
-* 报错
-1. ./configure时老是报！
+1. configure报错
+
+``` bash
 checking openssl/ssl.h usability... no
 checking openssl/ssl.h presence... no
 checking for openssl/ssl.h... no
 configure: error:
   !!! OpenSSL is not properly installed on your system. !!!
   !!! Can not include OpenSSL headers files. 
+```
 
-解决办法：
-yum install -y openssl openssl-devel
+* 解决办法：
+``` bash
+[root@node1 keepalived-1.2.14]# yum install -y openssl openssl-devel
+```
 
-or
+或者
 
+``` bash
 checking for openssl/ssl.h... no
 configure: error: 
 !!! OpenSSL is not properly installed on your system. !!!
 !!! Can not include OpenSSL headers files. !!!
+```
 * 解决办法
+``` bash
 [root@node1 keepalived-1.2.14]# yum install openssl*
+```
 
 2. configure: error: No SO_MARK declaration in headers
 * 报错：
+``` bash
 checking for kernel macvlan support... no
 checking whether SO_MARK is declared... no
 configure: error: No SO_MARK declaration in headers
-* 解决办法
-[root@node1 keepalived-1.2.14]# ./configure --prefix=/usr/local/keepalived --disable-fwmark
+```
 
+* 解决办法
+
+``` bash
+[root@node1 keepalived-1.2.14]# ./configure --prefix=/usr/local/keepalived --disable-fwmark
+```
