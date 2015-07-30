@@ -118,7 +118,7 @@ http://dockerpool.com/static/books/docker_practice/index.html
 
 ## 实践总结
 #####Dockerfile创建
-``` bash
+```bash
  >$ boot2docker ssh
  >$ sudo vi Dockerfile
 # This is a comment
@@ -127,21 +127,22 @@ MAINTAINER Docker lonpo <jinking@leweg.com>
 RUN apt-get update && apt-get install -y nginx
 ```
 
-######docker build创建
-``` bash
+######docker build
+```bash
 >$ sudo docker build -t="lonpo/ubuntu:nginx" .
 ```
 
 #####docker启动容器，并挂载本地文件夹到nginx/html
-``` bash
+```bash
 >$ sudo docker run --name nginx_test -it -v /mnt/docker/nginx:/usr/share/nginx/html -p 80:80 lonpo/ubuntu:nginx  /bin/bash
 ```
+
 * 在d:/docker/nginx新建index.html
 * 输入http://192.168.59.103/即可看到效果！
 
 ##关于本地文件与docker容器共享
 - docker iamges
-``` bash
+```bash
 	docker@boot2docker:/mnt/sda1$ docker images
 	REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 	lonpo/ubuntu        nginx               58eaace4f049        34 minutes ago      227.6 MB
@@ -151,13 +152,13 @@ RUN apt-get update && apt-get install -y nginx
 ```
 - oracle vitualBox容器添加共享文件夹路径：d:/docker，文件名：docker，千万不要选择“自动挂载”选项
 - docker虚拟机挂载本地文件夹，将共享文件夹挂载到/mnt/docker/
-``` bash
+```bash
 	>$ cd /mnt/
 	>$ mkdir docker
 	>$ sudo mount -t vboxsf docker /mnt/docker/
 ```
 - 运行docker容器，将/mnt/docker/挂载到容器里面
-``` bash
+```bash
 	>$ docker run -it -v /mnt/docker/:/usr/docker/ ubuntu
 ```
 
