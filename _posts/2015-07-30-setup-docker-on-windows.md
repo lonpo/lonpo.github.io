@@ -75,7 +75,7 @@ docker run -it -p 80:80 -v /mnt/bdshare/:/bdshare fe65a2781dae /bin/bash
 这样就把宿主windows的K:\BaiduShare目录，挂载到了container的/bdshare目录
 
 ``` bash
->#cd /mnt/sd1/
+>#cd /mnt/sda1/
 >#sudo su
 >#vi init.sh
 #!/bin/sh 
