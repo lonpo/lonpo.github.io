@@ -75,13 +75,12 @@ docker run -it -p 80:80 -v /mnt/bdshare/:/bdshare fe65a2781dae /bin/bash
 这样就把宿主windows的K:\BaiduShare目录，挂载到了container的/bdshare目录
 
 ``` bash
+>#cd /mnt/sd1/
 >#sudo su
 >#vi init.sh
 #!/bin/sh 
 sudo mount -t vboxsf docker /mnt/docker/
 docker run -it -v /mnt/docker/:/usr/docker/  -v /mnt/sda1/data:/data ubuntu
-```
-``` bash
 >#chmod +x init.sh
 >#./init.sh
 ```
