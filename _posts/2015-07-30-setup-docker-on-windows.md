@@ -75,11 +75,8 @@ docker run -it -p 80:80 -v /mnt/bdshare/:/bdshare fe65a2781dae /bin/bash
 这样就把宿主windows的K:\BaiduShare目录，挂载到了container的/bdshare目录
 
 ``` bash
-			>#sudo su
-			>#vi init.sh
-```
-
-``` bash
+>#sudo su
+>#vi init.sh
 #!/bin/sh 
 sudo mount -t vboxsf docker /mnt/docker/
 docker run -it -v /mnt/docker/:/usr/docker/  -v /mnt/sda1/data:/data ubuntu
@@ -137,8 +134,8 @@ RUN apt-get update && apt-get install -y nginx
 >$ sudo docker run --name nginx_test -it -v /mnt/docker/nginx:/usr/share/nginx/html -p 80:80 lonpo/ubuntu:nginx  /bin/bash
 ```
 
-* 在d:/docker/nginx新建index.html
-* 输入http://192.168.59.103/即可看到效果！
+######在d:/docker/nginx新建index.html
+######输入http://192.168.59.103/即可看到效果！
 
 ##关于本地文件与docker容器共享
 ######docker iamges
