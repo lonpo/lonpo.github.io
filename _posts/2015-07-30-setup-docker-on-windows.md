@@ -126,36 +126,38 @@ FROM ubuntu:latest
 MAINTAINER Docker lonpo <jinking@leweg.com>
 RUN apt-get update && apt-get install -y nginx
 ```
+
 ######docker build创建
 ``` bash
 >$ sudo docker build -t="lonpo/ubuntu:nginx" .
 ```
+
 #####docker启动容器，并挂载本地文件夹到nginx/html
 ``` bash
 >$ sudo docker run --name nginx_test -it -v /mnt/docker/nginx:/usr/share/nginx/html -p 80:80 lonpo/ubuntu:nginx  /bin/bash
 ```
-#####在d:/docker/nginx新建index.html
-#####输入http://192.168.59.103/即可看到效果！
+* 在d:/docker/nginx新建index.html
+* 输入http://192.168.59.103/即可看到效果！
 
 ##关于本地文件与docker容器共享
 - docker iamges
 ``` bash
-docker@boot2docker:/mnt/sda1$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-lonpo/ubuntu        nginx               58eaace4f049        34 minutes ago      227.6 MB
-nginx               latest              6886fb5a9b8d        12 days ago         132.9 MB
-ubuntu              latest              d2a0ecffe6fa        2 weeks ago         188.4 MB
-hello-world         latest              91c95931e552        3 months ago        910 B
+	docker@boot2docker:/mnt/sda1$ docker images
+	REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+	lonpo/ubuntu        nginx               58eaace4f049        34 minutes ago      227.6 MB
+	nginx               latest              6886fb5a9b8d        12 days ago         132.9 MB
+	ubuntu              latest              d2a0ecffe6fa        2 weeks ago         188.4 MB
+	hello-world         latest              91c95931e552        3 months ago        910 B
 ```
 - oracle vitualBox容器添加共享文件夹路径：d:/docker，文件名：docker，千万不要选择“自动挂载”选项
 - docker虚拟机挂载本地文件夹，将共享文件夹挂载到/mnt/docker/
 ``` bash
- >$ cd /mnt/
- >$ mkdir docker
- >$ sudo mount -t vboxsf docker /mnt/docker/
+	>$ cd /mnt/
+	>$ mkdir docker
+	>$ sudo mount -t vboxsf docker /mnt/docker/
 ```
 - 运行docker容器，将/mnt/docker/挂载到容器里面
 ``` bash
- >$ docker run -it -v /mnt/docker/:/usr/docker/ ubuntu
+	>$ docker run -it -v /mnt/docker/:/usr/docker/ ubuntu
 ```
 
