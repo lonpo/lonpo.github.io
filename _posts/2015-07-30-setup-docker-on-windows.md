@@ -141,7 +141,7 @@ RUN apt-get update && apt-get install -y nginx
 * 输入http://192.168.59.103/即可看到效果！
 
 ##关于本地文件与docker容器共享
-* docker iamges
+######docker iamges
 ```bash
 	docker@boot2docker:/mnt/sda1$ docker images
 	REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
@@ -150,14 +150,14 @@ RUN apt-get update && apt-get install -y nginx
 	ubuntu              latest              d2a0ecffe6fa        2 weeks ago         188.4 MB
 	hello-world         latest              91c95931e552        3 months ago        910 B
 ```
-* oracle vitualBox容器添加共享文件夹路径：d:/docker，文件名：docker，千万不要选择“自动挂载”选项
-* docker虚拟机挂载本地文件夹，将共享文件夹挂载到/mnt/docker/
+######oracle vitualBox容器添加共享文件夹路径：d:/docker，文件名：docker，千万不要选择“自动挂载”选项
+######docker虚拟机挂载本地文件夹，将共享文件夹挂载到/mnt/docker/
 ```bash
 	>$ cd /mnt/
 	>$ mkdir docker
 	>$ sudo mount -t vboxsf docker /mnt/docker/
 ```
-* 运行docker容器，将/mnt/docker/挂载到容器里面
+######运行docker容器，将/mnt/docker/挂载到容器里面
 ```bash
 	>$ docker run -it -v /mnt/docker/:/usr/docker/ ubuntu
 ```
