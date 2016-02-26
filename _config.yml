@@ -97,7 +97,7 @@ whitelist: []
 gems:      []
 
 # Conversion
-markdown:    redcarpet
+markdown:    kramdown
 highlighter: pygments
 lsi:         false
 excerpt_separator: "<!--more-->"
