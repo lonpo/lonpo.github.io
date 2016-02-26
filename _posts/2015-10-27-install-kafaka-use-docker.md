@@ -80,3 +80,4 @@ e9cfaa838f35        lonpo/ubuntu:ubuntu   "/bin/bash"         17 hours ago      
 最后在生产者窗口输入对应字符串回车，则可以观察到消费者窗口显示数字；
 
 ![kafka演示](/images/kafka.jpg)
+
