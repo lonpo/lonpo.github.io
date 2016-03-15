@@ -13,7 +13,6 @@ mathjax:
 ---
 
 - [乐微购](http://www.leweg.com)
-- [Dpast](http://dpast.org)
 
 
 <div class="alert alert-info" role="alert">

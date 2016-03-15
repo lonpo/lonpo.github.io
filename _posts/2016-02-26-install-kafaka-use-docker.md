@@ -1,11 +1,10 @@
 ---
 layout: post
 title: docker环境下搭建Kafka教程
-description: 使用docker搭建Kafka教程
+date: 2016-02-26 14:59:01 +0800
 category: 消息队列
 tags: [docker, zookeeper, Kafka]
 comments: true
-share: true
 ---
 
 # 简介
@@ -15,7 +14,7 @@ share: true
 # 第一步、搭建docker环境
 	docker虚拟化应用容器引擎，可以快速方便的搭建自己的环境。详细的可以参考之前的文章
 	* $docker images列出所有images
-```bash
+```shell
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 lonpo/ubuntu        ubuntu              2bdf1ee34eec        About an hour ago   818.8 MB
@@ -25,14 +24,14 @@ ubuntu              latest              c29e52d44f69        8 days ago          
 hello-world         latest              91c95931e552        10 months ago       910 B
 ```
 	* 创建一个容器并进入
-	```bash
+	```shell
 	$ docker run -it lonpo/ubuntu:ubuntu
 	```
 	
 # 第二步、安装zookeeper并配置
 	* 下载zookeeper #wget http://mirrors.cnnic.cn/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz 
 	* 修改zookeeper/conf/zoo.cfg并启动zookeeper
-	```bash
+	```shell
 		cd zookeeper-3.4.6
 		cp -rf conf/zoo_sample.cfg conf/zoo.cfg
 		vi zoo.cfg
@@ -48,7 +47,7 @@ hello-world         latest              91c95931e552        10 months ago       
 
 # 第四步、保存当前容器container为最新的images
 	* 列出当前正在运行container
-		```bash
+		```shell
 	$ docker ps
 CONTAINER ID        IMAGE                 COMMAND             CREATED             STATUS              PORTS               NAMES
 667cdc98bd61        lonpo/ubuntu:ubuntu   "/bin/bash"         22 minutes ago      Up 22 minutes       80/tcp              ecstatic_goodall
@@ -62,7 +61,7 @@ e9cfaa838f35        lonpo/ubuntu:ubuntu   "/bin/bash"         17 hours ago      
 	
 # 第五步、 创建topics和启动producer
 	* 再创建一个容器
-	```bash
+	```shell
 	$ docker run -it lonpo/ubuntu:ubuntu
 	```
 	* 新建一个TOPIC
@@ -71,7 +70,7 @@ e9cfaa838f35        lonpo/ubuntu:ubuntu   "/bin/bash"         17 hours ago      
 	** kafka-console-producer.sh --broker-list 172.17.0.5:9092 --sync --topic kafkatopic & 
 #第六步、启动consumer
 	* 再创建一个容器
-	```bash
+	```shell
 	$ docker run -it lonpo/ubuntu:ubuntu
 	```
 	* 启动KAFKA消费者
