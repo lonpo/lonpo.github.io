@@ -89,8 +89,18 @@ future:      true
 unpublished: false
 
 # Plugins
-whitelist: []
-gems: [jekyll-paginate]
+gems:
+  - jekyll-coffeescript
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-coffeescript
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-redirect-from
 
 # Conversion
 markdown:    kramdown
