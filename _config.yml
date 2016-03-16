@@ -67,15 +67,16 @@ links:
     icon: user
 
 # Where things are
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-data_source: ./_data
-collections: null
+source:       .
+destination:  ./_site
+plugins_dir:  ./_plugins
+layouts_dir:  ./_layouts
+data_dir: 	  ./_data
+includes_dir: ./_includes
+collections:  null
 
 # Handling Reading
-safe:         false
+safe:         true
 include:      [".htaccess"]
 exclude:      []
 keep_files:   [".git", ".svn"]
@@ -91,13 +92,16 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      []
+gems: [jekyll-paginate]
 
 # Conversion
 markdown:    kramdown
-highlighter: 
+highlighter: rouge
 lsi:         false
 excerpt_separator: "<!--more-->"
+incremental:  false
+gist:
+   noscript: false
 
 # Serving
 detach:  false
@@ -110,7 +114,7 @@ url: "http://lonpo.github.io" # the base hostname & protocol for your site
 relative_permalinks: false
 
 # Outputting
-permalink:     /:year/:month/:day/:title
+permalink:     date
 paginate: 6
 paginate_path: /page:num
 timezone:      Asia/Shanghai
@@ -133,6 +137,7 @@ rdiscount:
 redcarpet:
   extensions: []
 
+github: [metadata]
 kramdown:
   auto_ids:       true
   footnote_nr:    1
@@ -141,7 +146,8 @@ kramdown:
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
   input:          GFM
-
+  hard_wrap: 	  false
+  
   coderay:
     coderay_wrap:              div
     coderay_line_numbers:      inline
