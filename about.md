@@ -11,5 +11,5 @@ comments: true
 </figure>
 
 <div class="alert alert-success" role="alert">
-    每天醒来，敲醒自己的不是钟声，而是梦想
+    我就是我，不一样的烟火
 </div>

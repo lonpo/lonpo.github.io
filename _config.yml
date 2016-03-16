@@ -38,7 +38,7 @@ owner:
 google_plus:    
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   UA-47369838-1
+google_analytics:   UA-52116871-3
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
@@ -67,22 +67,20 @@ links:
     icon: user
 
 # Where things are
-source:       .
-destination:  ./_site
-plugins_dir:  ./_plugins
-layouts_dir:  ./_layouts
-data_dir: 	  ./_data
-includes_dir: ./_includes
-collections:  null
+source:      .
+destination: ./_site
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
+data_dir: ./_data
+collections: null
 
 # Handling Reading
-safe:         true
+safe:         false
 include:      [".htaccess"]
 exclude:      []
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-textile_ext:  "textile"
 
 # Filtering Content
 show_drafts: null
@@ -91,40 +89,27 @@ future:      true
 unpublished: false
 
 # Plugins
-gems:
-  - jekyll-coffeescript
-  - jekyll-gist
-  - jekyll-mentions
-  - jekyll-paginate
-  - jekyll-redirect-from
-whitelist:
-  - jekyll-coffeescript
-  - jekyll-gist
-  - jekyll-mentions
-  - jekyll-paginate
-  - jekyll-redirect-from
+whitelist: []
+gems: [jekyll-paginate]
 
 # Conversion
 markdown:    kramdown
 highlighter: rouge
 lsi:         false
 excerpt_separator: "<!--more-->"
-incremental:  false
-gist:
-   noscript: false
 
 # Serving
 detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lonpo.github.io" # the base hostname & protocol for your site http://lonpo.github.io
+url: "http://lonpo.github.io" # the base hostname & protocol for your site
 
 # Backwards-compatibility
-#relative_permalinks: true
+relative_permalinks: false
 
 # Outputting
-permalink:     /:year-:month-:day-:title/
+permalink:     /:year/:month/:day/:title
 paginate: 6
 paginate_path: /page:num
 timezone:      Asia/Shanghai
@@ -133,21 +118,6 @@ quiet:    false
 defaults: []
 
 # Markdown Processors
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
-  fenced_code_blocks: true
-
-rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: []
-
-github: [metadata]
 kramdown:
   auto_ids:       true
   footnote_nr:    1
@@ -156,8 +126,7 @@ kramdown:
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
   input:          GFM
-  hard_wrap: 	  false
-  
+
   coderay:
     coderay_wrap:              div
     coderay_line_numbers:      inline

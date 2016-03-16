@@ -1,5 +1,13 @@
 # JEKYLL OMEGA THEME
 
+项目名:	JEKYLL OMEGA THEME
+
+原始作者:	Hossain Mohd Faysal
+
+项目类型:	Jekyll最酷的主题
+
+许可证:	MIT License
+
 HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyll主题，它为那些喜欢文章内容放在网页最上方和中间的工程师和文字工作者而设计。这个主题可以给每个页面和文章添加一个漂亮的背景图片。 它由工程师 slash Mathematician 创建[Hossain Mohd Faysal](http://alum.mit.edu/www/hmfaysal/).
 
 主题特性:
@@ -29,6 +37,8 @@ HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyl
 * 给搜索引擎使用的Sitemap
 * 由一位电子工程师设计
 
+想看到所有列出的特性, 访问 [这个链接](http://blog.ibrother.me/jekyll-omega-theme/)
+
 ![screenshot of HMFAYSAL OMEGA Theme](https://raw.github.com/hmfaysal/hmfaysal-omega-theme/gh-pages/images/hmfaysal-omega-preview.jpg)
 
 ## 最快部署
@@ -39,6 +49,17 @@ HMFAYSAL OMEGA 是一个最小化，很漂亮并且有着响应式设计的Jekyl
 2. 一个支持markdown的编辑器
 3. fork这个项目
 4. clone之后本地提交修改
+
+## 新Jekyll站点的基本设置
+
+1. [安装 Jekyll](http://jekyllrb.com) ，如果有问题，看这篇 [安装指导](https://coderq.com/t/jekyll-di-pian-an-zhuang-jekyll/105).
+2. Fork [JEKYLL OMEGA Theme](https://github.com/ibrother/jekyll-omega-theme/fork)这个项目
+3. Clone你刚才fork的项目.
+4. 编辑 `_config.yml` 来自定义你的站点。
+5. 查看`_posts`目录下面的示例文章。
+6. 探索更多的自定义功能可以继续阅读文档。
+
+
 
 ---
 
@@ -297,6 +318,21 @@ HMFAYSAL-OMEGA-THEME
 │
 └───_posts
 ```
+
+---
+
+## 有问题?
+
+使用主题遇到问题或者想知道设置一些东西，如果你是汉子，可以联系原作者[@hmfaysal](http://twitter.com/hmfaysal)，或者使用[Issue](https://github.com/ibrother/jekyll-omega-theme/issues/new)
+如果你是萌妹子，我只想说：请联系我 <ibrother.linux@gmail.com>
+
+---
+
+## 有需求?
+
+如果你对本主题有特殊的需求，或者需要自定义一些元素。可以给作者Twitter发信息 [@hmfaysal](http://twitter.com/hmfaysal) 或者发邮件 <hmfaysal@alum.mit.edu>
+
+---
 
 ## 许可证
 

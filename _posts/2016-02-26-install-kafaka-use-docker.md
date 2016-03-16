@@ -13,8 +13,7 @@ comments: true
  
 # 第一步、搭建docker环境
 	docker虚拟化应用容器引擎，可以快速方便的搭建自己的环境。详细的可以参考之前的文章
-	* `$docker images` 列出所有images
-	
+	* $docker images列出所有images
 ```shell
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
@@ -24,17 +23,14 @@ ubuntu              14.04               c29e52d44f69        8 days ago          
 ubuntu              latest              c29e52d44f69        8 days ago          188 MB
 hello-world         latest              91c95931e552        10 months ago       910 B
 ```
-	
-* 创建一个容器并进入
-
-```shell
-$ docker run -it lonpo/ubuntu:ubuntu
-```
+	* 创建一个容器并进入
+	```shell
+	$ docker run -it lonpo/ubuntu:ubuntu
+	```
 	
 # 第二步、安装zookeeper并配置
 	* 下载zookeeper #wget http://mirrors.cnnic.cn/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz 
 	* 修改zookeeper/conf/zoo.cfg并启动zookeeper
-	
 	```shell
 		cd zookeeper-3.4.6
 		cp -rf conf/zoo_sample.cfg conf/zoo.cfg
@@ -51,39 +47,32 @@ $ docker run -it lonpo/ubuntu:ubuntu
 
 # 第四步、保存当前容器container为最新的images
 	* 列出当前正在运行container
-	
-```shell
-$ docker ps
+		```shell
+	$ docker ps
 CONTAINER ID        IMAGE                 COMMAND             CREATED             STATUS              PORTS               NAMES
 667cdc98bd61        lonpo/ubuntu:ubuntu   "/bin/bash"         22 minutes ago      Up 22 minutes       80/tcp              ecstatic_goodall
 f8a65985fadc        lonpo/ubuntu:ubuntu   "/bin/bash"         52 minutes ago      Up 52 minutes       80/tcp              ecstatic_tesla
 e9cfaa838f35        lonpo/ubuntu:ubuntu   "/bin/bash"         17 hours ago        Up 17 hours         80/tcp              admiring_almeida
-```
-
+	```
 	* 保存最新的CONTAINER ID为之前Image
-	
-	```shell
+	```bash
 		$ docker commit 667cdc98bd61 lonpo/ubuntu:ubuntu
 	```
 	
 # 第五步、 创建topics和启动producer
 	* 再创建一个容器
-	
 	```shell
 	$ docker run -it lonpo/ubuntu:ubuntu
 	```
-	
 	* 新建一个TOPIC
 	** kafka-topics.sh --create --topic kafkatopic --replication-factor 1 --partitions 1 --zookeeper 172.17.0.5:2181 &
 	* 启动KAFKA生产者
 	** kafka-console-producer.sh --broker-list 172.17.0.5:9092 --sync --topic kafkatopic & 
 #第六步、启动consumer
 	* 再创建一个容器
-	
 	```shell
 	$ docker run -it lonpo/ubuntu:ubuntu
 	```
-	
 	* 启动KAFKA消费者
 	** kafka-console-consumer.sh --zookeeper 172.17.0.5:2181 --topic kafkatopic --from-beginning & 
 	 
