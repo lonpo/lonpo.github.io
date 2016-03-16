@@ -1,8 +1,7 @@
-source "https://rubygems.org/"
+source 'http://mirrors.aliyun.com/rubygems/'
 
-gem "jekyll", "~> 3.0"
-gem "jekyll-sitemap"
-gem "jekyll-gist"
-gem "octopress"
-gem "jekyll-paginate"
-gem "github-pages"
+require 'json'
+require 'open-uri'
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+
+gem 'github-pages', versions['github-pages']
