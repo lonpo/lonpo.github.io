@@ -15,7 +15,6 @@ tags: [blog, linux, java, android, program, developer]
         {% assign modifiedtime = post.modified | date: "%Y%m%d" %}
         {% assign posttime = post.date | date: "%Y%m%d" %}
             {% if post.type == 'quote' %}
-			<div>{{ post.url }}aaa</div><div>{{ site.url }}bbb</div>
             <div class="row">
                 <article class="post col-md-10 col-md-offset-1">
                     <header class="post-header">
@@ -176,6 +175,7 @@ tags: [blog, linux, java, android, program, developer]
             {% endif %}
             {% if post.type != 'video' and post.type != 'status' and post.type != 'quote' and post.type != 'photo' %}
             <div class="row">
+				<div>{{ post.url }}aaa</div><div>{{ site.url }}bbb</div>
                 <article class="post post col-md-8 col-md-offset-2">
                    <header class="post-header">
                    {% if post.featured %}<div class="cursive">this post is featured</div>{% endif %}
