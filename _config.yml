@@ -118,7 +118,7 @@ detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+url: "http://lonpo.github.io" # the base hostname & protocol for your site http://lonpo.github.io
 
 # Backwards-compatibility
 relative_permalinks: false
