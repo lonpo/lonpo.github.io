@@ -1,5 +1,5 @@
 GEM
-  remote: https://ruby.taobao.org/
+  remote: http://mirrors.aliyun.com/rubygems/
   specs:
     RedCloth (4.2.9-x86-mingw32)
     activesupport (4.2.5.2)
@@ -125,6 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-coffeescript
 
 BUNDLED WITH
    1.10.5
