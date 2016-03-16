@@ -67,12 +67,23 @@ links:
     icon: user
 
 # Where things are
-source:      ./
-destination: ./_site
+#source:      .
+#destination: ./_site
 plugins_dir:     ./_plugins
-layouts_dir:     ./_layouts
-data_dir: ./_data
-collections: null
+#layouts_dir:     ./_layouts
+#data_dir: ./_data
+#collections: null
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: post
+page_layout: page
+
+# Format titles with titlecase?
+titlecase: true
 
 # Handling Reading
 safe:         false
@@ -81,6 +92,7 @@ exclude:      []
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
 
 # Filtering Content
 show_drafts: null
@@ -113,10 +125,10 @@ detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lonpo.github.io" # the base hostname & protocol for your site
+url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
 
 # Outputting
-permalink:     /:year/:month/:day/:title
+permalink:   /:categories/:title/
 paginate: 6
 paginate_path: /page:num
 timezone:      Asia/Shanghai
@@ -124,6 +136,20 @@ timezone:      Asia/Shanghai
 quiet:    false
 defaults: []
 
+# Markdown Processors
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+  fenced_code_blocks: true
+
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
 
 # Markdown Processors
 kramdown:

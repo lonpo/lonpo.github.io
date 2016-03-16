@@ -4,6 +4,7 @@ title: docker在windows下安装及共享文件夹配置
 description: docker在windows下安装及问题解决
 category: docker
 tags: [docker, nginx, 容器, 虚拟化]
+date: 2016-03-10 14:59:01 +8000
 comments: true
 share: true
 ---
