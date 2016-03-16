@@ -115,9 +115,6 @@ host:    127.0.0.1
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lonpo.github.io" # the base hostname & protocol for your site
 
-# Backwards-compatibility
-relative_permalinks: false
-
 # Outputting
 permalink:     /:year/:month/:day/:title
 paginate: 6
@@ -126,6 +123,7 @@ timezone:      Asia/Shanghai
 
 quiet:    false
 defaults: []
+
 
 # Markdown Processors
 kramdown:
