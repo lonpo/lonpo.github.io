@@ -121,10 +121,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lonpo.github.io" # the base hostname & protocol for your site http://lonpo.github.io
 
 # Backwards-compatibility
-relative_permalinks: false
+#relative_permalinks: true
 
 # Outputting
-permalink:     date
+permalink:     /:year-:month-:day-:title/
 paginate: 6
 paginate_path: /page:num
 timezone:      Asia/Shanghai
