@@ -32,7 +32,7 @@ java多线程编程之三（interrupted和isInterrupted区别）
 ```
 
 
-##　为什么interrupt，isInterrupted是`实例方法`，而interrupted是`类方法`？
+## 为什么interrupt，isInterrupted是`实例方法`，而interrupted是`类方法`？
 
 摘抄网上的解释：
 

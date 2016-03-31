@@ -7,7 +7,7 @@ tags: [java, Timer, TimerTask]
 comments: true
 ---
 
-## Timer是设置计划任务，在某一个时间点开始执行某一个任务。但封装的类却是TimerTask类，执行执行任务的代码是放在TimerTask类里。
+Timer是设置计划任务，在某一个时间点开始执行某一个任务。但封装的类却是TimerTask类，执行执行任务的代码是放在TimerTask类里。
 
 
 Timer调用图关系
@@ -19,7 +19,7 @@ Timer调用图关系
 ### Timer类
 
 ```java
-    public class Timer {
+public class Timer {
     /**
      * 任务队列，是一个平衡二分堆，调度时间越早的是放在最前面的。 节点[n]具有两个子节点[2*n]和[2*n+1]
      */
@@ -30,7 +30,7 @@ Timer调用图关系
      */
     private final TimerThread thread = new TimerThread(queue);
 	
-	    private static int serialNumber() {
+	private static int serialNumber() {
         return nextSerialNumber.getAndIncrement();
     }
 	
@@ -52,6 +52,7 @@ Timer调用图关系
         thread.setName(name);
         thread.start();
     }
+}
 ```
 
 
@@ -59,7 +60,7 @@ Timer调用图关系
 ### TimerThread类
 
 ```java
-	class TimerThread extends Thread {
+class TimerThread extends Thread {
 
     boolean newTasksMayBeScheduled = true;
 
@@ -125,12 +126,13 @@ Timer调用图关系
             }
         }
     }
+}
 ```	
 
 ### TaskQueue
 
 ```java
-	class TaskQueue {
+class TaskQueue {
     /**
      * 平衡二分堆
      */
@@ -212,9 +214,9 @@ Timer调用图关系
 ### TimerTask抽象类
 
 ```java
-	public abstract class TimerTask implements Runnable {
-		public abstract void run();
-	}
+public abstract class TimerTask implements Runnable {
+	public abstract void run();
+}
 ```
 
 
