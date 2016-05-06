@@ -26,7 +26,7 @@ comments: true
 ```	
 
 如图：
-	![daocloud](/images/docker-registry.png)
+	![daocloud](/images/blog/docker-registry.png)
 
 ### 1.运行容器并进入 `docker run -it [image]`
 
